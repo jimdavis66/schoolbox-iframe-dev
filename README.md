@@ -34,12 +34,15 @@ python app.py
 docker build -t schoolbox-iframe .
 ```
 
-2. Run the container:
+2. Create a `.env` file in the app directory with your Schoolbox shared secret:
+```
+SCHOOLBOX_SHARED_SECRET=your_shared_secret_here
+APP_PORT=3000
+```
+
+3. Run the container:
 ```bash
-docker run -d \
-  -p 3000:3000 \
-  -e SCHOOLBOX_SHARED_SECRET=your_shared_secret_here \
-  schoolbox-iframe
+docker compose up -d
 ```
 
 ## Schoolbox Integration
