@@ -4,5 +4,5 @@ services:
     image: schoolbox-iframe-dev
     container_name: schoolbox-iframe-dev
     ports:
-      - 5030:5030
+      - 3000:3000
     env_file: .env
