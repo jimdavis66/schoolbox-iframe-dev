@@ -1,7 +1,7 @@
 services:
   schoolbox-iframe-dev:
     # build: .
-    image: schoolbox-iframe-dev
+    image: ghcr.io/jimdavis66/schoolbox-iframe-dev:latest
     container_name: schoolbox-iframe-dev
     ports:
       - 3000:3000
