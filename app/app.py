@@ -38,10 +38,14 @@ def index():
     
     # Verify authentication
     if not all([key, timestamp, user_id, username]):
-        return "Missing authentication parameters", 401
+        # return "Missing authentication parameters", 401
+        # Return HTTP 200 otherwise iframely will not embed
+        return "Missing authentication parameters", 200
     
     if not verify_schoolbox_auth(key, timestamp, user_id, username):
-        return "Invalid authentication", 401
+        # return "Invalid authentication", 401
+        # Return HTTP 200 otherwise iframely will not embed
+        return "Invalid authentication", 200
     
     # If authenticated, render the main page
     return render_template('index.html', username=username)
